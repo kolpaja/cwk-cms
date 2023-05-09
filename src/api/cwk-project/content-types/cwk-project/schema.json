@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cwk_projects",
+  "info": {
+    "singularName": "cwk-project",
+    "pluralName": "cwk-projects",
+    "displayName": "Cwk-Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "featuredImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "startedCodingThisProject": {
+      "type": "date"
+    },
+    "isFinished": {
+      "type": "boolean",
+      "default": false
+    },
+    "repository_link": {
+      "type": "string"
+    },
+    "publish_link": {
+      "type": "string"
+    },
+    "isPublished": {
+      "type": "boolean"
+    },
+    "progress": {
+      "type": "enumeration",
+      "enum": [
+        "to-do",
+        "just-started",
+        "in-progress",
+        "mid-way",
+        "almost-finished",
+        "works-in-my-laptop",
+        "we-are-live",
+        "i-am-still-debugging",
+        "i-need-help"
+      ]
+    },
+    "project_type": {
+      "type": "enumeration",
+      "enum": [
+        "personal",
+        "client",
+        "exploring",
+        "clone",
+        "learning"
+      ]
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog.blog",
+      "inversedBy": "cwk_projects"
+    }
+  }
+}

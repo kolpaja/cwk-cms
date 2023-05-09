@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coding_teches",
+  "info": {
+    "singularName": "coding-tech",
+    "pluralName": "coding-teches",
+    "displayName": "coding_tech"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "official_docs": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "front-end",
+        "back-end",
+        "database",
+        "game-dev",
+        "ai",
+        "block-chain",
+        "devOps",
+        "servers",
+        "native",
+        "UI/UX",
+        "design"
+      ]
+    },
+    "isViral": {
+      "type": "boolean",
+      "default": false
+    },
+    "repository_link": {
+      "type": "string"
+    }
+  }
+}
